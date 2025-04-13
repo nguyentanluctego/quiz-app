@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+
+<body>
+    <h1>Quiz App</h1>
+
+    <div id="joinForm">
+        <h2>Join a Quiz</h2>
+        <div>
+            <label for="quizId">Quiz ID:</label>
+            <input type="text" id="quizId" value="bTaskee">
+        </div>
+        <div>
+            <label for="userName">Your Name:</label>
+            <input type="text" id="userName">
+        </div>
+        <button id="joinButton">Join Quiz</button>
+    </div>
+
+    <div id="quizSection" class="hidden">
+        <h2>Quiz: <span id="quizTitle"></span></h2>
+        <div id="userInfo">
+            <p>Welcome, <span id="userNameDisplay"></span>!</p>
+            <p>Your Score: <span id="userScore">0</span></p>
+        </div>
+
+        <div id="questionContainer">
+            <div class="timer">Time remaining: <span id="timer">30</span> seconds</div>
+            <div class="question">
+                <h3 id="questionText"></h3>
+                <div class="options" id="options"></div>
+            </div>
+            <div id="result" class="result hidden"></div>
+            <button id="nextButton" class="hidden">Next Question</button>
+        </div>
+
+        <div class="leaderboard">
+            <h3>Leaderboard</h3>
+            <div class="leaderboard-header">
+                <span>No.</span>
+                <span>Name</span>
+                <span>Joined At</span>
+                <span>Last Active</span>
+                <span>Score</span>
+            </div>
+            <div id="leaderboardEntries"></div>
+        </div>
+    </div>
+
+    <script src="/static/js/quiz.js"></script>
+</body>
+
+</html>
